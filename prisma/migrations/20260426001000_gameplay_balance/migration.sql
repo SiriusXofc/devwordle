@@ -1,0 +1,4 @@
+ALTER TABLE "Game" ADD COLUMN "timeRemaining" INTEGER;
+ALTER TABLE "Game" ADD COLUMN "difficulty" TEXT;
+ALTER TABLE "Game" ADD COLUMN "category" TEXT;
+ALTER TABLE "Game" ADD COLUMN "guesses" TEXT;

@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  username      String   @unique
+  email         String   @unique
+  password      String
+  createdAt     DateTime @default(now())
+  avatar        String?
+  bio           String?  @default("")
+  totalGames    Int      @default(0)
+  totalWins     Int      @default(0)
+  currentStreak Int      @default(0)
+  bestStreak    Int      @default(0)
+  lastWonAt      DateTime?
+  avgAttempts   Float    @default(0)
+  xp            Int      @default(0)
+  rank          String   @default("INICIANTE")
+  games         Game[]
+  dailies       DailyCompletion[]
+
+  @@index([xp])
+}
+
+model Game {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word      String
+  attempts  Int
+  won       Boolean
+  mode      String
+  duration  Int
+  timeRemaining Int?
+  difficulty String?
+  category  String?
+  guesses   String?
+  xpEarned  Int
+  hintUsed  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@index([mode])
+  @@index([createdAt])
+}
+
+model DailyCompletion {
+  id        String   @id @default(cuid())
+  userId    String
+  date      String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, date])
+  @@index([userId])
+}

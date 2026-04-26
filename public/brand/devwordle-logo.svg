@@ -1,0 +1,10 @@
+<svg width="356" height="52" viewBox="0 0 356 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">DevWordle</title>
+  <desc id="desc">Logo do DevWordle com monograma DW e wordmark em estilo terminal.</desc>
+  <rect width="356" height="52" fill="none"/>
+  <rect x="1" y="1" width="50" height="50" fill="#000000" stroke="#22c55e" stroke-width="2"/>
+  <text x="13" y="33" fill="#22c55e" font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="2">DW</text>
+  <path d="M70 10V42" stroke="#1f2937" stroke-width="2"/>
+  <text x="90" y="34" fill="#22c55e" font-family="JetBrains Mono, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="8">DEVWORDLE</text>
+  <rect x="338" y="14" width="4" height="25" fill="#22c55e"/>
+</svg>
