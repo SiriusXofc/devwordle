@@ -1,5 +1,5 @@
 MAIN=next.config.mjs
-MEMORY=2048
+MEMORY=512
 VERSION=recommended
 DISPLAY_NAME=DevWordle
 DESCRIPTION=Wordle de termos tech para devs.
