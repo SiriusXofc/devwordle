@@ -1,0 +1,14 @@
+.git
+.env
+.env.local
+.env.*.local
+node_modules
+.next
+artifacts
+*.zip
+*.log
+prisma/dev.db
+*.db
+*.sqlite
+*.sqlite3
+public/brand/devwordle-logo-source.png
